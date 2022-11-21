@@ -1,9 +1,15 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom'
+import { CreateGame } from './pages/CreateGame';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      test
+      <Routes>
+        <Route path='/' element={ <CreateGame/> }/>
+
+        <Route path='*' element={<p>404</p>}/>
+      </Routes>
     </div>
   );
 }
